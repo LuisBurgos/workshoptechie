@@ -45,14 +45,12 @@ app.post('/webhook/', function(req, res) {
             if (GreetingValidator.textContainsGreeting(text)) {
                 Messenger.sendTextMessage(sender, "Hola, mucho gusto, soy Workshop Techie")
                 continue
+            } else if (text.toUpperCase().indexOf("Gracias".toUpperCase()) !== -1) {
+                Messenger.sendTextMessage(sender, "De nada, estoy para servirte!")
+                continue
             } else {
               Messenger.sendTextMessage(sender, "Para comenzar escribre 'Hola'")
               continue
-            }
-
-            if (text.toUpperCase().indexOf("Gracias".toUpperCase()) !== -1) {
-                Messenger.sendTextMessage(sender, "De nada, estoy para servirte!")
-                continue
             }
         }
 
