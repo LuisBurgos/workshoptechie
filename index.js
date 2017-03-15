@@ -48,6 +48,9 @@ app.post('/webhook/', function(req, res) {
             } else if (text.toUpperCase().indexOf("Gracias".toUpperCase()) !== -1) {
                 Messenger.sendTextMessage(sender, "De nada, estoy para servirte!")
                 continue
+            } else if (text.toUpperCase().indexOf("Calendario".toUpperCase()) !== -1) {
+                Messenger.sendCalendarMessage(sender)
+                continue
             } else {
               Messenger.sendTextMessage(sender, "Para comenzar escribre 'Hola'")
               continue
