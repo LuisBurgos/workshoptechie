@@ -1,0 +1,29 @@
+[
+  {
+      "date": "22/03/2017",
+      "startTime": "09:30",
+      "endTime": "11:00",
+      "name": "PostCCS",
+      "responsable": "Juan Carlos Moguel Solís y Daniel Rosales",
+      "requirements": [
+        "-Llevar laptop",
+        "Node js",
+        "Conocimiento basico de javascript"
+      ],
+      "classroom": "CC5",
+      "alreadyTaught": false
+  },
+  {
+      "date": "29/03/2017",
+      "startTime": "09:30",
+      "endTime": "11:00",
+      "name": "GULP.JS",
+      "responsable": "Sheila Ricalde Pérez",
+      "requirements": [
+        "Llevar laptop",
+        "Tener instalado NodeJS y npm"
+      ],
+      "classroom": "CC5",
+      "alreadyTaught": false
+  }
+]
