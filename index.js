@@ -57,6 +57,16 @@ app.post('/webhook/', function(req, res) {
             }
         }
 
+        //TODO: Improve postback handler
+        if (event.postback) {
+            let text = JSON.stringify(event.postback)
+            if(text.toUpperCase().indexOf("Gracias".toUpperCase()) !== -1){
+                Messenger.sendTextMessage(sender, "De nada, estoy para servirte!")
+                continue
+            }
+            continue
+        }
+
     }
     res.sendStatus(200)
 })

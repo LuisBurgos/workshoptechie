@@ -41,13 +41,20 @@ module.exports = {
     },
 
     sendCalendarMessage: function(sender) {
+        //TODO: Improve data loading
         const firstOption = {
           "title": data[0].name,
           "subtitle": data[0].responsable,
+          "date": data[0].date,
+          "startTime": data[0].startTime,
+          "endTime": data[0].endTime
         }
         const secondOption = {
             "title": data[1].name,
             "subtitle": data[1].responsable,
+            "date": data[1].date,
+            "startTime": data[1].startTime,
+            "endTime": data[1].endTime
         }
 
         let messageData = {
@@ -58,8 +65,8 @@ module.exports = {
                     "elements": [
                         {
                             "title": firstOption.title,
-                            "subtitle": firstOption.subtitle,
-                            "image_url": "https://github.com/AdrianLeyva/workshop-technology/blob/master/Imagenes/logo.png",
+                            "subtitle": (firstOption.subtitle + "\n" + firstOption.date + "\n" + "De " + firstOption.startTime + " a " + firstOption.endTime),
+                            "image_url": "https://raw.githubusercontent.com/AdrianLeyva/workshop-technology/master/Imagenes/logo.png",
                             "buttons": [
                                 {
                                     "type": "postback",
@@ -70,8 +77,8 @@ module.exports = {
                         },
                         {
                           "title": secondOption.title,
-                          "subtitle": secondOption.subtitle,
-                            "image_url": "https://github.com/AdrianLeyva/workshop-technology/blob/master/Imagenes/logo.png",
+                          "subtitle": (secondOption.subtitle + "\n" + secondOption.date + "\n" + "De " + secondOption.startTime + " a " + secondOption.endTime),
+                            "image_url": "https://raw.githubusercontent.com/AdrianLeyva/workshop-technology/master/Imagenes/logo.png",
                             "buttons": [
                                 {
                                     "type": "postback",
